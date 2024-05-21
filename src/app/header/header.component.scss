@@ -1,0 +1,64 @@
+.nav-parent {
+  background-color: beige;
+  padding: 0%;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  z-index: 1;
+  box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 5px 15px -4px rgba(0, 0, 0, 0.75);
+}
+
+.nav-logo {
+  width: 30%;
+  height: 75px;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar {
+  width: 70%;
+  float: right;
+  position: relative;
+  display: flex;
+  background-color: #fa8128;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-items>ul>li {
+  position: relative;
+  display: inline;
+  list-style: none;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.nav-items>ul>li>a {
+  color: beige;
+  text-decoration: none;
+}
+
+.nav-items>ul>li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.17rem;
+  background-color: beige;
+  left: 0;
+  bottom: 0;
+  transform-origin: 0% 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-items>ul>li:hover::after {
+  transform: scaleX(1);
+}
